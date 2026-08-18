@@ -1,4 +1,4 @@
-class MAIN2 {
+class Produto {
     int numero;
     double preco;
 
@@ -25,11 +25,12 @@ class COMPRA {
     }
 }
 
-public class MAIN2 {
+public class ProdutoMain {
+    @SuppressWarnings("static-access")
     public static void main(String[] args) {
-        PRODUTO[] p = new PRODUTO[3];
+        Produto[] p = new Produto[3];
 
-        p[0] = new PRODUTO();
+        p[0] = new Produto();
         p[0].numero = 1;
         p[0].preco = 150;
 
@@ -43,7 +44,7 @@ public class MAIN2 {
         compra.cliente = 1;
         compra.quantidade = 2;
 
-        double desc = p[0].desconto();
+        final double desc = ((Produto) p[0]).desconto();
         double adicional = c.descontoAdicional(p[0].preco - desc);
 
         compra.calcular(p[0].preco, desc + adicional);

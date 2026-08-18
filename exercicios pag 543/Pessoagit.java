@@ -11,7 +11,7 @@ class PESSOA {
     }
 }
 
-public class Main {
+public class Pessoagit pull {
     public static void main(String[] args) {
         PESSOA p = new PESSOA();
 
